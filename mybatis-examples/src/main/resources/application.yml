@@ -1,0 +1,21 @@
+spring:
+  application:
+    name: mybatis-examples
+  datasource:
+    # 本地mysql的数据库名称不能是纯数字
+    # 改完配置，运行MybatisExamplesApplication自动创建数据库及相应的数据表
+    url: 'jdbc:mysql://localhost:3306/zzl?
+          createDatabaseIfNotExist=true
+          &serverTimezone=Asia/Shanghai'
+    username: root
+    password: root
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    initialization-mode: always
+
+logging:
+  level:
+    root: warn
+    com:
+      example: debug
+  pattern:
+    console: '%-5level %C.%M[%line] - %msg%n'
